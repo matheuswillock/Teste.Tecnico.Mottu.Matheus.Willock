@@ -1,0 +1,6 @@
+@Teste.Tecnico.Mottu.Matheus.Willock.WebApi_HostAddress = http://localhost:5172
+
+GET {{Teste.Tecnico.Mottu.Matheus.Willock.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
