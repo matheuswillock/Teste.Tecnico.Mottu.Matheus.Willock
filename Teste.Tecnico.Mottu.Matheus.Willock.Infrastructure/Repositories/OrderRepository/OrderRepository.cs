@@ -8,7 +8,7 @@ using Teste.Tecnico.Mottu.Matheus.Willock.Domain.Models;
 
 namespace Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.Repositories.OrderRepository
 {
-    public class OrderRepository
+    public class OrderRepository : IOrderRepository
     {
         private readonly MottuDbContext _context;
 

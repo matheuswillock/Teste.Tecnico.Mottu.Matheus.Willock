@@ -44,7 +44,10 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.KafkaInfra
                 using (var producer = new ProducerBuilder<string, string>(_producerConfig).Build())
                 {
                     var message = JsonConvert.SerializeObject(order);
-                    var result = await producer.ProduceAsync(topic: topic, new Message<string, string> { Key = "key", Value = message });
+
+                    var Randomkey = GenerateRandomKey();
+
+                    var result = await producer.ProduceAsync(topic: topic, new Message<string, string> { Key = Randomkey, Value = message });
 
                     if (result.Status != PersistenceStatus.Persisted)
                     {
@@ -68,6 +71,19 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.KafkaInfra
                 return output;
             }
 
+        }
+
+        private string GenerateRandomKey()
+        {
+            var random = new Random();
+            var keyLength = 10;
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var key = new char[keyLength];
+            for (int i = 0; i < keyLength; i++)
+            {
+                key[i] = chars[random.Next(chars.Length)];
+            }
+            return new string(key);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Teste.Tecnico.Mottu.Matheus.Willock.Application.Usecases.DeliveryManUsecases;
 using Teste.Tecnico.Mottu.Matheus.Willock.Application.Usecases.MotorcycleUseCases;
+using Teste.Tecnico.Mottu.Matheus.Willock.Application.Usecases.OrderUseCases;
 using Teste.Tecnico.Mottu.Matheus.Willock.Application.Usecases.UserAdminUsecases;
 
 namespace Teste.Tecnico.Mottu.Matheus.Willock.Application.DependencyInjection.Extensions
@@ -12,6 +13,7 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.Application.DependencyInjection.Ex
             services.AddScoped<IUserAdminUseCase, UserAdminUseCase>();
             services.AddScoped<IMotorCycleUseCases, MotorCycleUseCases>();
             services.AddScoped<IDeliveryManUseCase, DeliveryManUseCase>();
+            services.AddScoped<IOrderUseCases, OrderUseCases>();
 
             return services;
         }

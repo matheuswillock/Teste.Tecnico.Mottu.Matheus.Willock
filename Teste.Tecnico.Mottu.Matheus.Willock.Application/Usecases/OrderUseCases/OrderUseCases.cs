@@ -26,11 +26,9 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.Application.Usecases.OrderUseCases
             var output = new Output();
             try
             {
-                await _orderRepository.Create(order);
-
                 var getOrder = await _orderRepository.Get(order.Id);
 
-                if (getOrder == null)
+                if (getOrder != null)
                 {
                     output.AddErrorMessage("An error occurred while creating the order");
                     return output;   
@@ -45,6 +43,16 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.Application.Usecases.OrderUseCases
                 }
 
                 await _orderRepository.Create(order);
+
+                var getCreatedOrder = await _orderRepository.Get(order.Id);
+
+                if (getCreatedOrder == null)
+                {
+                    output.AddErrorMessage("An error occurred while creating the order");
+                    return output;
+                }
+
+                output.AddResult(order);
 
                 output.AddMessage("Order sent successfully");
                 return output;

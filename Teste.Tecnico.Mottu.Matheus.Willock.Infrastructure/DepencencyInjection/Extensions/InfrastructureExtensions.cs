@@ -7,6 +7,7 @@ using Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.KafkaInfra.Contracts;
 using Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.Repositories.DeliveryManRepository;
 using Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.Repositories.DocumentsRepository;
 using Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.Repositories.MotorCycleRepository;
+using Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.Repositories.OrderRepository;
 using Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.Repositories.RentalPlansRepository;
 using Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.Repositories.UserAdminRepository;
 
@@ -21,6 +22,7 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.Infrastructure.DepencencyInjection
             services.AddScoped<IMotorCycleRepository, MotorCycleRepository>();
             services.AddScoped<IRentalPlansRepository, RentalPlansRepository>();
             services.AddScoped<IUserAdminRepository, UserAdminRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.AddScoped<ICosmic, Cosmic>();
 

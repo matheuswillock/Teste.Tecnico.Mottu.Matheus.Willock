@@ -1,0 +1,474 @@
+{
+	"info": {
+		"_postman_id": "3a972ac4-10b7-45ab-844f-f7ce15622199",
+		"name": "Teste-mottu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16347423"
+	},
+	"item": [
+		{
+			"name": "DeliveryMan",
+			"item": [
+				{
+					"name": "Plans Choice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"rentalDays\": 0,\n  \"endDay\": \"2024-03-18\",\n  \"deliveryManToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI1YTAwZjliOC01NWQwLTRmMTMtODZhMC05ZjYwMjA5ZDNjYmEiLCJ1bmlxdWVfbmFtZSI6Ik1hdGhldXMiLCJlbWFpbCI6Im1hdGhldXNAZW1haWwuY29tIiwibmJmIjoxNzEwMjQyMzk0LCJleHAiOjE3MTAyNDU5OTQsImlhdCI6MTcxMDI0MjM5NH0.pJ1dThC9_BYG4QVgzaOMIjEiG8Az53aPWMq8F-zOxUA\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/deliveryman/plans/choice",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"deliveryman",
+								"plans",
+								"choice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Matheus",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "matheus@email.com",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "Senha@123",
+									"type": "text"
+								},
+								{
+									"key": "CnhNumber",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "CnhType",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "Cnpj",
+									"value": "64.635.727/0001-28",
+									"type": "text"
+								},
+								{
+									"key": "Birthday",
+									"value": "07/11/1997",
+									"type": "text"
+								},
+								{
+									"key": "CnhPhoto",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44366/deliveryman/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"deliveryman",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"matheus@email.com\",\n  \"password\": \"Senha@123\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/deliveryman/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"deliveryman",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserAdmin",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"johndoe@email.com\",\n  \"password\": \"Senha@123\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiJkMTVmNjJjZC1iNjdjLTQ1YmMtYTU2YS1iN2FhYmFjNDBlMDgiLCJ1bmlxdWVfbmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huZG9lQGVtYWlsLmNvbSIsIm5iZiI6MTcxMDI2ODE3MiwiZXhwIjoxNzEwMjcxNzcyLCJpYXQiOjE3MTAyNjgxNzJ9.JM9O11SHc4ib4uMst-2P4Uq9mPj45Nw8u6yIHzkorKk"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"johndoe@email.com\",\n  \"password\": \"Senha@123\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI1YWVhMzQxZi01YjdkLTRjMTQtYTkyZC1hYWFiYzVjYWE4YTgiLCJ1bmlxdWVfbmFtZSI6Ik5hdGhpZWxlIiwiZW1haWwiOiJuYXRoaWVsZS53aWxsb2NrQGVtYWlsLmNvbSIsIm5iZiI6MTcxMDEyNTM0MCwiZXhwIjoxNzEwMTI4OTQwLCJpYXQiOjE3MTAxMjUzNDB9.wjQcHck4Bl08_GzCeIo03Fd4ZANSlxaVhC84XE2A0ZM"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Nathiele Willock\",\n  \"email\": \"nathiele.willock@email.com\",\n  \"password\": \"Senha@1234\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiJkMTVmNjJjZC1iNjdjLTQ1YmMtYTU2YS1iN2FhYmFjNDBlMDgiLCJ1bmlxdWVfbmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huZG9lQGVtYWlsLmNvbSIsIm5iZiI6MTcxMDI2ODIzMywiZXhwIjoxNzEwMjcxODMzLCJpYXQiOjE3MTAyNjgyMzN9.ahUNbvvV--TnYlw_TSEP-wghcRyjV1yyKOjoIssBAgY"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"johndoe@email.com\",\n  \"password\": \"Senha@123\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/delete",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Motorcycle",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxZTM3OWEzZS1hNWVhLTRhNzgtYmM1MS1mOGUxM2RjNDc3NmUiLCJ1bmlxdWVfbmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huZG9lQGVtYWlsLmNvbSIsIm5iZiI6MTcxMDEzMjgzMiwiZXhwIjoxNzEwMTM2NDMyLCJpYXQiOjE3MTAxMzI4MzJ9.qFASrWh8y2YAKQJbRLM7WZk82a4Or8dxRsOTzBEXqis"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44366/motorcycle/get/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"motorcycle",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI4ODMzYzZjNS04YjQwLTQ4NmMtOGFmOC0zZjIxOGVkMGM5NDQiLCJ1bmlxdWVfbmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huLkRvZUBlbWFpbC5jb20iLCJuYmYiOjE3MTAyNDI5MTUsImV4cCI6MTcxMDI0NjUxNSwiaWF0IjoxNzEwMjQyOTE1fQ.01w8t1iHgTHClraWAA4cvhRjkvRIlhHBZs6dHP5sI2M"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"plate\": \"aac-2b45\",\n  \"year\": \"2018\",\n  \"model\": \"moto simples\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/motorcycle/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"motorcycle",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Plate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxZTM3OWEzZS1hNWVhLTRhNzgtYmM1MS1mOGUxM2RjNDc3NmUiLCJ1bmlxdWVfbmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huZG9lQGVtYWlsLmNvbSIsIm5iZiI6MTcxMDEzMjgzMiwiZXhwIjoxNzEwMTM2NDMyLCJpYXQiOjE3MTAxMzI4MzJ9.qFASrWh8y2YAKQJbRLM7WZk82a4Or8dxRsOTzBEXqis"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44366/motorcycle/get/abc-1234",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"motorcycle",
+								"get",
+								"abc-1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxZTM3OWEzZS1hNWVhLTRhNzgtYmM1MS1mOGUxM2RjNDc3NmUiLCJ1bmlxdWVfbmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huZG9lQGVtYWlsLmNvbSIsIm5iZiI6MTcxMDEzMjgzMiwiZXhwIjoxNzEwMTM2NDMyLCJpYXQiOjE3MTAxMzI4MzJ9.qFASrWh8y2YAKQJbRLM7WZk82a4Or8dxRsOTzBEXqis"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"plate\": \"ABC-1234\",\n  \"year\": \"2018\",\n  \"model\": \"moto simples\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44366/motorcycle/update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"motorcycle",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxZTM3OWEzZS1hNWVhLTRhNzgtYmM1MS1mOGUxM2RjNDc3NmUiLCJ1bmlxdWVfbmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huZG9lQGVtYWlsLmNvbSIsIm5iZiI6MTcxMDEzMjgzMiwiZXhwIjoxNzEwMTM2NDMyLCJpYXQiOjE3MTAxMzI4MzJ9.qFASrWh8y2YAKQJbRLM7WZk82a4Or8dxRsOTzBEXqis"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44366/motorcycle/remove/abc-1234",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44366",
+							"path": [
+								"motorcycle",
+								"remove",
+								"abc-1234"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

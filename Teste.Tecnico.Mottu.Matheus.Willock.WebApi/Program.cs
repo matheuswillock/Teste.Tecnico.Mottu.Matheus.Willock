@@ -18,8 +18,6 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.WebApi
             // Add services to the container.
             builder.Services.AddControllers();
 
-
-
             builder.Services.AddDbContext<MottuDbContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -65,8 +63,6 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.WebApi
             app.UseAuthorization();
 
             app.MapControllers();
-
-            app.MapGet("/", () => "Hello World!");
 
             app.Run();
         }

@@ -95,13 +95,9 @@ namespace Teste.Tecnico.Mottu.Matheus.Willock.WebApi.Controllers
                 var result = await _userAdminUseCaseRegister.UpdateAdmin(user, userAdminToken);
 
                 if (!result.IsValid)
-                {
                     return BadRequest(result);
-                }
 
-                var getResults = result.GetResult();
-
-                return Ok(getResults);
+                return Ok(result);
             }
             catch (Exception ex)
             {
