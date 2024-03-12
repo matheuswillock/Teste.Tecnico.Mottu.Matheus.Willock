@@ -15,5 +15,7 @@ Para executar este projeto, você precisará ter o seguinte instalado em seu amb
 5.	Execute as migrações do banco de dados usando o comando dotnet ef database update.
 6.	Inicie o projeto usando o comando dotnet run.
 
+   > Para ajudar com os testes na raiz do projeto há uma collection do endpoints
+
 ## Testes
 Para executar os testes unitários, navegue até a pasta de testes e execute o comando dotnet test.
